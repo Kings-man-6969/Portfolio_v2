@@ -335,6 +335,14 @@ body {
   box-shadow: 0 8px 32px rgba(0, 255, 209, 0.1);
 }
 
+:root.light .stat-card {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+:root.light .stat-card:hover {
+  box-shadow: 0 12px 24px -8px rgba(14, 165, 233, 0.25);
+}
+
 .stat-icon {
   color: var(--brand-primary);
   margin-bottom: 20px;
