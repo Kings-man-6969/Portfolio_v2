@@ -2,7 +2,8 @@ export const portfolioData = {
   personal: {
     name: "Prashant Mishra",
     title: "Computer Science Undergraduate | AI & Machine Learning Engineer",
-    tagline: "Turning algorithms and data into real-world, production-ready systems.",
+    tagline: "I design and build real-time software systems where performance, correctness, and scalability matter. My work sits at the intersection of core computer science and applied AI—turning algorithms into systems that actually run in the real world.",
+    subTagline: "I enjoy problems where latency, data, and decisions collide.",
     mission: "Building real-time, scalable software systems by combining strong engineering fundamentals with applied AI and machine learning.",
     email: "prashantmishra6969@gmail.com",
     location: "Kanpur, Uttar Pradesh, India (IST)",
@@ -15,9 +16,15 @@ export const portfolioData = {
   },
   
   stats: [
-    { label: "Projects Built", value: "10+" },
-    { label: "AI/ML Systems", value: "5+" },
-    { label: "Real-Time Apps", value: "3" }
+    { label: "Projects Built", value: "10+", context: "spanning AI systems, automation tools, and full-stack platforms" },
+    { label: "AI/ML Systems", value: "5+", context: "focused on real-time inference, reliability, and evaluation" },
+    { label: "Real-Time Apps", value: "3", context: "designed with latency constraints and future scalability in mind" }
+  ],
+  
+  philosophy: [
+    "I care deeply about fundamentals—data structures, algorithms, and system behavior under load.",
+    "I prefer simple architectures that scale over clever solutions that don't.",
+    "When working with AI, I treat models as components of systems, not magic boxes."
   ],
   
   skills: [
