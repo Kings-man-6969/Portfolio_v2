@@ -318,6 +318,18 @@ body {
   transform: translateY(-2px);
 }
 
+:root.light .btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-medium);
+}
+
+:root.light .btn-secondary:hover {
+  background: var(--brand-primary);
+  color: #FFFFFF;
+  border-color: var(--brand-primary);
+}
+
 /* Stats Section */
 .stats-section {
   padding: 80px 40px;
