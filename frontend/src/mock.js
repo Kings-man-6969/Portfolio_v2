@@ -27,9 +27,11 @@ export const portfolioData = {
     "When working with AI, I treat models as components of systems, not magic boxes."
   ],
   
+  skillsIntro: "These are tools I use regularly—not a wishlist. I prioritize fundamentals first, frameworks second.",
+  
   skills: [
     {
-      category: "Core Programming & CS Foundations",
+      category: "Engineering Foundations",
       items: [
         { name: "Python", level: 90 },
         { name: "Java", level: 85 },
