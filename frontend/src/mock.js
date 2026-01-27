@@ -41,7 +41,7 @@ export const portfolioData = {
       ]
     },
     {
-      category: "AI / Machine Learning",
+      category: "Applied Machine Learning Systems",
       items: [
         { name: "ML Pipelines", level: 88 },
         { name: "Face Recognition", level: 90 },
