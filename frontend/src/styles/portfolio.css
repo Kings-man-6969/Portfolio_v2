@@ -78,6 +78,12 @@ body {
   backdrop-filter: blur(10px);
 }
 
+:root.light .portfolio-header {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-medium);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
 .header-content {
   max-width: 1400px;
   margin: 0 auto;
