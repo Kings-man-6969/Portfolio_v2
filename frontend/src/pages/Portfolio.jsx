@@ -190,7 +190,7 @@ const Portfolio = () => {
           <h2 className="section-title">
             <span className="title-prefix">{'>'}</span> SKILLS_MATRIX
           </h2>
-          <div className="section-subtitle">Technical capabilities and expertise</div>
+          <div className="section-subtitle">{portfolioData.skillsIntro}</div>
         </div>
 
         <div className="skills-grid">
