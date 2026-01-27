@@ -4,7 +4,7 @@ import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
-import { Mail, MapPin, Github, Linkedin, Twitter, Terminal, Activity, Zap, Code2, Database, Brain, ExternalLink, Send, Menu, X } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, Twitter, Terminal, Activity, Zap, Code2, Database, Brain, ExternalLink, Send, Menu, X, Download } from 'lucide-react';
 import '../styles/portfolio.css';
 
 const Portfolio = () => {
