@@ -61,6 +61,15 @@ const Portfolio = () => {
     setTimeout(() => setIsFormSubmitted(false), 3000);
   };
 
+  const handleResumeDownload = () => {
+    const link = document.createElement('a');
+    link.href = portfolioData.personal.resumeFile;
+    link.download = portfolioData.personal.resumeFileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="portfolio-container">
       {/* Header */}
