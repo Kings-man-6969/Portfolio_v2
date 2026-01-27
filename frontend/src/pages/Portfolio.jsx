@@ -160,7 +160,26 @@ const Portfolio = () => {
               </div>
               <div className="stat-value">{stat.value}</div>
               <div className="stat-label">{stat.label}</div>
+              <div className="stat-context">{stat.context}</div>
             </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section id="philosophy" className="philosophy-section">
+        <div className="section-header">
+          <h2 className="section-title">
+            <span className="title-prefix">{'>'}</span> SYSTEM_PHILOSOPHY
+          </h2>
+        </div>
+
+        <div className="philosophy-content">
+          {portfolioData.philosophy.map((principle, index) => (
+            <div key={index} className="philosophy-item">
+              <span className="philosophy-prefix">{'>'}</span>
+              <p className="philosophy-text">{principle}</p>
+            </div>
           ))}
         </div>
       </section>
