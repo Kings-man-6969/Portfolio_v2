@@ -50,7 +50,7 @@ export const portfolioData = {
       ]
     },
     {
-      category: "Computer Vision & NLP",
+      category: "Perception & Language Systems",
       items: [
         { name: "OpenCV", level: 90 },
         { name: "DeepFace", level: 88 },
