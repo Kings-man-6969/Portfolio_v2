@@ -90,41 +90,40 @@ export const portfolioData = {
     {
       id: 1,
       title: "Real-Time Facial Recognition Surveillance System",
-      description: "Real-time facial recognition pipeline using embedding-based identity matching with optimized latency and improved accuracy.",
+      description: "Built a real-time facial recognition system designed for continuous video streams, where latency and false positives directly affect usability. Implemented embedding-based identity matching using FaceNet, optimized frame sampling, and tuned similarity thresholds to balance accuracy and speed.",
       tech: ["Python", "Streamlit", "OpenCV", "DeepFace", "FaceNet"],
       outcomes: [
-        "Optimized latency for real-time processing",
-        "Improved recognition accuracy",
-        "Event logging system",
-        "Scalable multi-camera design"
+        "Reduced inference latency through frame-skipping and threshold tuning",
+        "Improved recognition stability under varying lighting conditions",
+        "Designed logging and architecture for future multi-camera scaling"
       ],
       link: "#"
     },
     {
       id: 2,
       title: "E-ShopMate – Intelligent E-commerce Platform",
-      description: "Full-stack e-commerce platform with hybrid recommendation engine and NLP-based search for personalized shopping experience.",
+      description: "Designed a full-stack e-commerce platform focused on personalization rather than static browsing. Combined a hybrid recommendation approach with NLP-based search to improve product discovery and user experience.",
       tech: ["React", "Next.js", "MongoDB", "JavaScript", "HTML", "CSS"],
       outcomes: [
-        "Personalized recommendations",
-        "Secure authentication system",
-        "Scalable modular architecture",
-        "NLP-powered search"
+        "Personalized recommendations based on user behavior",
+        "Secure authentication and modular backend design",
+        "Architecture planned for future ML-driven recommendations and analytics"
       ],
       link: "#"
     },
     {
       id: 3,
       title: "JARVIS-Style AI Personal Assistant",
-      description: "Local AI assistant for command execution, app control, and code generation with offline automation capabilities.",
+      description: "Built a local AI assistant to explore command execution, intent parsing, and automation without relying entirely on cloud services. Focused on modular design so new commands and devices could be added without refactoring the core system.",
       tech: ["Python", "Speech Recognition", "NLP", "Automation APIs"],
       outcomes: [
-        "Modular, extensible architecture",
-        "Offline automation support",
-        "Online query processing",
-        "Voice command execution"
+        "Offline command execution with online query fallback",
+        "NLP-based intent parsing for natural interaction",
+        "Extensible architecture for cross-device support"
       ],
       link: "#"
     }
-  ]
+  ],
+  
+  contactTagline: "If you're working on systems where correctness and performance matter, I'd love to talk."
 };
