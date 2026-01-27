@@ -83,7 +83,39 @@ Add/remove/edit in the `skills:` array:
 
 ---
 
-### 5. Update Contact Info
+### 5. Update Education
+
+```javascript
+education: [
+  {
+    degree: "Your Degree Name",
+    institution: "University/School Name",
+    score: "GPA: X.XX or Percentage: XX%",
+    year: "Year Range"
+  }
+]
+```
+
+---
+
+### 6. Add Certifications
+
+```javascript
+certifications: [
+  {
+    title: "Certification Name",
+    issuer: "Issuing Organization",
+    date: "Month Year",
+    link: "https://credential-url.com"
+  }
+]
+```
+
+💡 **Pro Tip:** Leave the array empty if you don't have certifications yet - it will show a nice placeholder!
+
+---
+
+### 7. Update Contact Info
 
 ```javascript
 personal: {
