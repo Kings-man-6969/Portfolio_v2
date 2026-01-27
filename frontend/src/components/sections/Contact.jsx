@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from '../ui/card';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
 import { Button } from '../ui/button';
-import { Mail, MapPin, Activity, Github, Linkedin, Twitter, Download, Send } from 'lucide-react';
+import { Mail, MapPin, Activity, Github, Linkedin, Twitter, Download, Send, Loader2 } from 'lucide-react';
 import { portfolioData } from '../../mock';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
 
 const Contact = () => {
+    const formRef = useRef();
+    const [isLoading, setIsLoading] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -22,12 +26,47 @@ const Contact = () => {
         });
     };
 
-    const handleFormSubmit = (e) => {
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        setIsFormSubmitted(true);
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setIsFormSubmitted(false), 3000);
+        setIsLoading(true);
+
+        const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+        const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+        const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+        if (!serviceId || !templateId || !publicKey) {
+            toast.error("EmailJS configuration missing. Please check your .env file.");
+            console.error("Missing EmailJS credentials. Please check your .env file.");
+            setIsLoading(false);
+            return;
+        }
+
+        try {
+            const templateParams = {
+                name: formData.name,
+                email: formData.email,
+                message: formData.message
+            };
+
+            await emailjs.send(
+                serviceId,
+                templateId,
+                templateParams,
+                { publicKey: publicKey }
+            );
+
+            setIsFormSubmitted(true);
+            toast.success("Message sent successfully!");
+            setFormData({ name: '', email: '', message: '' });
+            setTimeout(() => setIsFormSubmitted(false), 5000);
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            console.error("Status:", error.status);
+            console.error("Text:", error.text);
+
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const handleResumeDownload = () => {
@@ -125,7 +164,7 @@ const Contact = () => {
                             </motion.div>
                         )}
 
-                        <form onSubmit={handleFormSubmit} className="contact-form flex flex-col gap-6">
+                        <form ref={formRef} onSubmit={handleFormSubmit} className="contact-form flex flex-col gap-6">
                             <div className="form-group flex flex-col gap-2">
                                 <label htmlFor="name" className="form-label text-xs text-text-muted uppercase tracking-widest font-bold">Name</label>
                                 <Input
@@ -135,7 +174,8 @@ const Contact = () => {
                                     onChange={handleFormChange}
                                     placeholder="Enter your name"
                                     required
-                                    className="form-input bg-white/5 border-border-subtle text-text-primary py-6 px-4 font-mono focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/20 rounded-none transition-all duration-300"
+                                    disabled={isLoading}
+                                    className="form-input bg-white/5 border-border-subtle text-text-primary py-6 px-4 font-mono focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/20 rounded-none transition-all duration-300 disabled:opacity-50"
                                 />
                             </div>
 
@@ -149,7 +189,8 @@ const Contact = () => {
                                     onChange={handleFormChange}
                                     placeholder="your.email@example.com"
                                     required
-                                    className="form-input bg-white/5 border-border-subtle text-text-primary py-6 px-4 font-mono focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/20 rounded-none transition-all duration-300"
+                                    disabled={isLoading}
+                                    className="form-input bg-white/5 border-border-subtle text-text-primary py-6 px-4 font-mono focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/20 rounded-none transition-all duration-300 disabled:opacity-50"
                                 />
                             </div>
 
@@ -163,13 +204,27 @@ const Contact = () => {
                                     placeholder="Your message here..."
                                     required
                                     rows={5}
-                                    className="form-input bg-white/5 border-border-subtle text-text-primary p-4 font-mono focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/20 rounded-none transition-all duration-300 min-h-[150px]"
+                                    disabled={isLoading}
+                                    className="form-input bg-white/5 border-border-subtle text-text-primary p-4 font-mono focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/20 rounded-none transition-all duration-300 min-h-[150px] disabled:opacity-50"
                                 />
                             </div>
 
-                            <Button type="submit" className="btn-primary btn-submit w-full bg-brand-primary text-black hover:bg-brand-hover hover:text-brand-primary border border-transparent hover:border-brand-primary transition-all duration-300 py-6 font-bold flex justify-center items-center gap-2 mt-2">
-                                Send Message
-                                <Send size={20} />
+                            <Button
+                                type="submit"
+                                disabled={isLoading}
+                                className="btn-primary btn-submit w-full bg-brand-primary text-black hover:bg-brand-hover hover:text-brand-primary border border-transparent hover:border-brand-primary transition-all duration-300 py-6 font-bold flex justify-center items-center gap-2 mt-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                            >
+                                {isLoading ? (
+                                    <>
+                                        <Loader2 size={20} className="animate-spin" />
+                                        Sending...
+                                    </>
+                                ) : (
+                                    <>
+                                        Send Message
+                                        <Send size={20} />
+                                    </>
+                                )}
                             </Button>
                         </form>
                     </Card>

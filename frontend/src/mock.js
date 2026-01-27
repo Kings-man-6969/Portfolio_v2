@@ -27,52 +27,52 @@ export const portfolioData = {
   personal: {
     name: "Prashant Mishra",
     title: "Computer Science Undergraduate | AI & Machine Learning Engineer",
-    
+
     // Hero section taglines (this is what people read first!)
     tagline: "I design and build real-time software systems where performance, correctness, and scalability matter. My work sits at the intersection of core computer science and applied AI—turning algorithms into systems that actually run in the real world.",
     subTagline: "I enjoy problems where latency, data, and decisions collide.",
-    
+
     // Contact information
     email: "prashantmishra6969@gmail.com",
     location: "Kanpur, Uttar Pradesh, India (IST)",
     availability: "Open to internships and software engineering opportunities",
-    
+
     // Resume file (place your resume.pdf in /app/frontend/public/)
     // Update this filename to match your actual resume file
     resumeFile: "/resume.pdf",
     resumeFileName: "Prashant_Mishra_Resume.pdf",
-    
+
     // Social media links (update with your actual profile URLs)
     social: {
-      github: "https://github.com/prashantmishra",
-      linkedin: "https://linkedin.com/in/prashantmishra",
-      twitter: "https://twitter.com/prashantmishra"
+      github: "https://github.com/Kings-man-6969",
+      linkedin: "https://www.linkedin.com/in/prashnatmishra6009/",
+      twitter: "https://twitter.com"
     }
   },
-  
+
   // ============================================================================
   // STATS SECTION
   // ============================================================================
   // Add context to make numbers meaningful!
   // Format: { label: "What", value: "Number", context: "Why it matters" }
   stats: [
-    { 
-      label: "Projects Built", 
-      value: "10+", 
-      context: "spanning AI systems, automation tools, and full-stack platforms" 
+    {
+      label: "Projects Built",
+      value: "10+",
+      context: "spanning AI systems, automation tools, and full-stack platforms"
     },
-    { 
-      label: "AI/ML Systems", 
-      value: "5+", 
-      context: "focused on real-time inference, reliability, and evaluation" 
+    {
+      label: "AI/ML Systems",
+      value: "5+",
+      context: "focused on real-time inference, reliability, and evaluation"
     },
-    { 
-      label: "Real-Time Apps", 
-      value: "3", 
-      context: "designed with latency constraints and future scalability in mind" 
+    {
+      label: "Real-Time Apps",
+      value: "3",
+      context: "designed with latency constraints and future scalability in mind"
     }
   ],
-  
+
   // ============================================================================
   // SYSTEM PHILOSOPHY
   // ============================================================================
@@ -83,7 +83,7 @@ export const portfolioData = {
     "I prefer simple architectures that scale over clever solutions that don't.",
     "When working with AI, I treat models as components of systems, not magic boxes."
   ],
-  
+
   // ============================================================================
   // EDUCATION SECTION
   // ============================================================================
@@ -107,23 +107,26 @@ export const portfolioData = {
       year: "2019"
     }
   ],
-  
+
   // ============================================================================
   // CERTIFICATIONS SECTION
   // ============================================================================
   // Add your certifications here
   // Format: { title: "Certification Name", issuer: "Issuing Organization", date: "Month Year", link: "URL" }
   certifications: [
-    // Example:
-    // { title: "AWS Certified Solutions Architect", issuer: "Amazon Web Services", date: "Jan 2024", link: "#" }
-    // Add your certifications below
+    {
+      title: "AI Voice Agents Challenge",
+      issuer: "MURF AI",
+      date: "December 2026",
+      link: "/cert_murf_ai.png"
+    }
   ],
-  
+
   // ============================================================================
   // SKILLS SECTION
   // ============================================================================
   skillsIntro: "These are tools I use regularly—not a wishlist. I prioritize fundamentals first, frameworks second.",
-  
+
   // Add/remove skill categories as needed
   // Level: 0-100 (represents proficiency, but keep it honest!)
   skills: [
@@ -182,7 +185,7 @@ export const portfolioData = {
       ]
     }
   ],
-  
+
   // ============================================================================
   // PROJECTS SECTION
   // ============================================================================
@@ -227,7 +230,7 @@ export const portfolioData = {
     }
     // To add more projects, copy the structure above and paste here
   ],
-  
+
   // ============================================================================
   // CONTACT SECTION
   // ============================================================================

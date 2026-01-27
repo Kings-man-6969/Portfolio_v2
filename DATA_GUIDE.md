@@ -1,34 +1,34 @@
 # Portfolio Data Management Guide
 
 ## Overview
-Your entire portfolio content is managed through a single file: `/app/frontend/src/mock.js`
+This entire portfolio content is managed through a single file: `/app/frontend/src/mock.js`
 
 This makes updating your portfolio as simple as editing one file!
 
 ---
 
-## Quick Start: How to Update Your Portfolio
+## Quick Start: How to Update Portfolio
 
 ### 1. **Update Personal Information**
 Edit `/app/frontend/src/mock.js` → `personal` section
 
 ```javascript
 personal: {
-  name: "Your Name",
-  title: "Your Title",
-  email: "your.email@example.com",
-  location: "Your City, Country",
+  name: "Name",
+  title: "Title",
+  email: "email@example.com",
+  location: "City, Country",
   // ... etc
 }
 ```
 
-### 2. **Add Your Resume**
+### 2. **Add Resume**
 
-**Step 1:** Place your resume PDF file in `/app/frontend/public/`
+**Step 1:** Place resume PDF file in `/app/frontend/public/`
 
 Example:
 ```bash
-# Copy your resume to the public folder
+# Copy resume to the public folder
 cp ~/Downloads/my-resume.pdf /app/frontend/public/resume.pdf
 ```
 
@@ -37,7 +37,7 @@ cp ~/Downloads/my-resume.pdf /app/frontend/public/resume.pdf
 ```javascript
 personal: {
   resumeFile: "/resume.pdf",  // Path relative to public folder
-  resumeFileName: "Your_Name_Resume.pdf"  // Download filename
+  resumeFileName: "Resume.pdf"  // Download filename
 }
 ```
 
@@ -239,7 +239,7 @@ social: {
 
 ## Need Help?
 
-If you need to make changes beyond what's covered here:
+If we need to make changes beyond what's covered here:
 
 1. **Design changes:** Edit `/app/frontend/src/styles/portfolio.css`
 2. **Layout changes:** Edit `/app/frontend/src/pages/Portfolio.jsx`
@@ -249,10 +249,8 @@ But for 99% of updates, you only need to edit `mock.js`!
 
 ---
 
-**Remember:** Your portfolio is a living document. Update it regularly as you:
+**Remember:** Portfolio is a living document. Update it regularly as you:
 - Complete new projects
 - Learn new skills
 - Gain new experiences
 - Refine your engineering philosophy
-
-Keep it fresh, honest, and focused on how you think as an engineer! 🚀
