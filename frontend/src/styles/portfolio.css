@@ -33,18 +33,18 @@
 
 /* Light Theme Overrides */
 :root.light {
-  --bg-primary: #EEF2F6;
-  --bg-secondary: #E3E8EF;
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #F1F5F9;
   --bg-card: #FFFFFF;
-  --text-primary: #121212;
-  --text-secondary: rgba(0, 0, 0, 0.7);
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
   --text-muted: #64748B;
-  --border-subtle: rgba(0, 0, 0, 0.08);
-  --border-medium: rgba(0, 0, 0, 0.15);
-  --brand-primary: #00BFA5;
-  /* Slightly darker teal for better contrast on white */
-  --brand-hover: rgba(0, 191, 165, 0.1);
-  --brand-active: #009688;
+  --border-subtle: rgba(15, 23, 42, 0.08);
+  --border-medium: rgba(15, 23, 42, 0.12);
+  --brand-primary: #0EA5E9;
+  /* Bright sky blue for better visibility */
+  --brand-hover: rgba(14, 165, 233, 0.08);
+  --brand-active: #0284C7;
 }
 
 * {
