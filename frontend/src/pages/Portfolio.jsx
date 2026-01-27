@@ -125,6 +125,10 @@ const Portfolio = () => {
             {portfolioData.personal.tagline}
           </p>
           
+          <p className="hero-sub-tagline">
+            {portfolioData.personal.subTagline}
+          </p>
+          
           <div className="hero-actions">
             <Button 
               className="btn-primary"
