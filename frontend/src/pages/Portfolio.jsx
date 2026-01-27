@@ -266,7 +266,7 @@ const Portfolio = () => {
           <h2 className="section-title">
             <span className="title-prefix">{'>'}</span> CONTACT_INTERFACE
           </h2>
-          <div className="section-subtitle">Let's build something incredible together</div>
+          <div className="section-subtitle">{portfolioData.contactTagline}</div>
         </div>
 
         <div className="contact-grid">
