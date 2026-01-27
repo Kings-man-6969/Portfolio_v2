@@ -85,6 +85,41 @@ export const portfolioData = {
   ],
   
   // ============================================================================
+  // EDUCATION SECTION
+  // ============================================================================
+  education: [
+    {
+      degree: "Bachelor of Technology in Computer Science and Engineering",
+      institution: "Pranveer Singh Institute of Technology, Kanpur",
+      score: "GPA: 7.77",
+      year: "2021 - 2025"
+    },
+    {
+      degree: "12th CISCE Board",
+      institution: "Heliger Borden Education Center, Panki, Kanpur",
+      score: "Percentage: 90.5%",
+      year: "2021"
+    },
+    {
+      degree: "10th CISCE Board",
+      institution: "Heliger Borden Education Center, Panki, Kanpur",
+      score: "Percentage: 86.6%",
+      year: "2019"
+    }
+  ],
+  
+  // ============================================================================
+  // CERTIFICATIONS SECTION
+  // ============================================================================
+  // Add your certifications here
+  // Format: { title: "Certification Name", issuer: "Issuing Organization", date: "Month Year", link: "URL" }
+  certifications: [
+    // Example:
+    // { title: "AWS Certified Solutions Architect", issuer: "Amazon Web Services", date: "Jan 2024", link: "#" }
+    // Add your certifications below
+  ],
+  
+  // ============================================================================
   // SKILLS SECTION
   // ============================================================================
   skillsIntro: "These are tools I use regularly—not a wishlist. I prioritize fundamentals first, frameworks second.",
