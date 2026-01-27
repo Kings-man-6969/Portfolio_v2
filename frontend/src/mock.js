@@ -1,13 +1,48 @@
+/**
+ * =============================================================================
+ * PORTFOLIO DATA CONFIGURATION
+ * =============================================================================
+ * 
+ * This file contains ALL the data for your portfolio.
+ * To update your portfolio, simply edit the values below.
+ * No need to touch any other files!
+ * 
+ * HOW TO UPDATE:
+ * 1. Personal Info: Edit name, title, email, location, social links
+ * 2. Resume: Place your resume.pdf in /app/frontend/public/ folder
+ * 3. Stats: Update numbers and their context
+ * 4. Philosophy: Edit your engineering principles (3-5 lines max)
+ * 5. Skills: Add/remove/edit skill categories and proficiency levels
+ * 6. Projects: Add/remove/edit projects with descriptions and outcomes
+ * 7. Contact: Update availability status and contact tagline
+ * 
+ * PRO TIP: Keep descriptions focused on engineering thinking, not just features!
+ * =============================================================================
+ */
+
 export const portfolioData = {
+  // ============================================================================
+  // PERSONAL INFORMATION
+  // ============================================================================
   personal: {
     name: "Prashant Mishra",
     title: "Computer Science Undergraduate | AI & Machine Learning Engineer",
+    
+    // Hero section taglines (this is what people read first!)
     tagline: "I design and build real-time software systems where performance, correctness, and scalability matter. My work sits at the intersection of core computer science and applied AI—turning algorithms into systems that actually run in the real world.",
     subTagline: "I enjoy problems where latency, data, and decisions collide.",
-    mission: "Building real-time, scalable software systems by combining strong engineering fundamentals with applied AI and machine learning.",
+    
+    // Contact information
     email: "prashantmishra6969@gmail.com",
     location: "Kanpur, Uttar Pradesh, India (IST)",
     availability: "Open to internships and software engineering opportunities",
+    
+    // Resume file (place your resume.pdf in /app/frontend/public/)
+    // Update this filename to match your actual resume file
+    resumeFile: "/resume.pdf",
+    resumeFileName: "Prashant_Mishra_Resume.pdf",
+    
+    // Social media links (update with your actual profile URLs)
     social: {
       github: "https://github.com/prashantmishra",
       linkedin: "https://linkedin.com/in/prashantmishra",
@@ -15,20 +50,47 @@ export const portfolioData = {
     }
   },
   
+  // ============================================================================
+  // STATS SECTION
+  // ============================================================================
+  // Add context to make numbers meaningful!
+  // Format: { label: "What", value: "Number", context: "Why it matters" }
   stats: [
-    { label: "Projects Built", value: "10+", context: "spanning AI systems, automation tools, and full-stack platforms" },
-    { label: "AI/ML Systems", value: "5+", context: "focused on real-time inference, reliability, and evaluation" },
-    { label: "Real-Time Apps", value: "3", context: "designed with latency constraints and future scalability in mind" }
+    { 
+      label: "Projects Built", 
+      value: "10+", 
+      context: "spanning AI systems, automation tools, and full-stack platforms" 
+    },
+    { 
+      label: "AI/ML Systems", 
+      value: "5+", 
+      context: "focused on real-time inference, reliability, and evaluation" 
+    },
+    { 
+      label: "Real-Time Apps", 
+      value: "3", 
+      context: "designed with latency constraints and future scalability in mind" 
+    }
   ],
   
+  // ============================================================================
+  // SYSTEM PHILOSOPHY
+  // ============================================================================
+  // 3-5 principles that show HOW you think as an engineer
+  // Keep it clear, authentic, and differentiated
   philosophy: [
     "I care deeply about fundamentals—data structures, algorithms, and system behavior under load.",
     "I prefer simple architectures that scale over clever solutions that don't.",
     "When working with AI, I treat models as components of systems, not magic boxes."
   ],
   
+  // ============================================================================
+  // SKILLS SECTION
+  // ============================================================================
   skillsIntro: "These are tools I use regularly—not a wishlist. I prioritize fundamentals first, frameworks second.",
   
+  // Add/remove skill categories as needed
+  // Level: 0-100 (represents proficiency, but keep it honest!)
   skills: [
     {
       category: "Engineering Foundations",
@@ -86,6 +148,11 @@ export const portfolioData = {
     }
   ],
   
+  // ============================================================================
+  // PROJECTS SECTION
+  // ============================================================================
+  // Write projects as engineering stories, not feature lists!
+  // Focus on: Problem → Approach → Tradeoffs → Outcomes
   projects: [
     {
       id: 1,
@@ -97,7 +164,7 @@ export const portfolioData = {
         "Improved recognition stability under varying lighting conditions",
         "Designed logging and architecture for future multi-camera scaling"
       ],
-      link: "#"
+      link: "#"  // Add GitHub repo or demo link
     },
     {
       id: 2,
@@ -109,7 +176,7 @@ export const portfolioData = {
         "Secure authentication and modular backend design",
         "Architecture planned for future ML-driven recommendations and analytics"
       ],
-      link: "#"
+      link: "#"  // Add GitHub repo or demo link
     },
     {
       id: 3,
@@ -121,9 +188,33 @@ export const portfolioData = {
         "NLP-based intent parsing for natural interaction",
         "Extensible architecture for cross-device support"
       ],
-      link: "#"
+      link: "#"  // Add GitHub repo or demo link
     }
+    // To add more projects, copy the structure above and paste here
   ],
   
+  // ============================================================================
+  // CONTACT SECTION
+  // ============================================================================
   contactTagline: "If you're working on systems where correctness and performance matter, I'd love to talk."
 };
+
+/**
+ * =============================================================================
+ * QUICK UPDATE CHECKLIST
+ * =============================================================================
+ * 
+ * When you want to update your portfolio:
+ * 
+ * □ Update personal info (name, email, location, social links)
+ * □ Place resume PDF in /app/frontend/public/ and update resumeFile path
+ * □ Update stats numbers and context
+ * □ Review and update philosophy principles
+ * □ Add/update skills and proficiency levels
+ * □ Add/update projects with engineering-focused descriptions
+ * □ Update availability status
+ * □ Save this file and refresh your browser!
+ * 
+ * That's it! No need to touch any other files.
+ * =============================================================================
+ */
