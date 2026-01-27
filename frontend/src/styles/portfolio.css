@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 :root {
+  /* Default Dark Theme */
   --bg-primary: #000000;
   --bg-secondary: #0a0a0a;
   --bg-card: #111111;
@@ -12,6 +13,38 @@
   --brand-primary: #00FFD1;
   --brand-hover: rgba(0, 255, 209, 0.1);
   --brand-active: #6FD2C0;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Light Theme Overrides */
+:root.light {
+  --bg-primary: #EEF2F6;
+  --bg-secondary: #E3E8EF;
+  --bg-card: #FFFFFF;
+  --text-primary: #121212;
+  --text-secondary: rgba(0, 0, 0, 0.7);
+  --text-muted: #64748B;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.15);
+  --brand-primary: #00BFA5;
+  /* Slightly darker teal for better contrast on white */
+  --brand-hover: rgba(0, 191, 165, 0.1);
+  --brand-active: #009688;
 }
 
 * {
@@ -137,7 +170,7 @@ body {
 .grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: 
+  background-image:
     repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(0, 255, 209, 0.03) 1px, rgba(0, 255, 209, 0.03) 60px),
     repeating-linear-gradient(-90deg, transparent, transparent 1px, rgba(0, 255, 209, 0.03) 1px, rgba(0, 255, 209, 0.03) 60px);
   pointer-events: none;
@@ -166,8 +199,15 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .hero-title {
@@ -702,6 +742,7 @@ body {
     transform: translateX(100%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -784,7 +825,7 @@ body {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .skills-grid,
   .projects-grid {
     grid-template-columns: 1fr;
@@ -795,7 +836,7 @@ body {
   .header-content {
     padding: 16px 24px;
   }
-  
+
   .nav-menu {
     position: fixed;
     top: 68px;
@@ -811,44 +852,44 @@ body {
     transition: all 0.3s ease;
     pointer-events: none;
   }
-  
+
   .nav-menu.active {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
   }
-  
+
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .hero-section {
     padding: 100px 24px 60px;
   }
-  
+
   .hero-title {
     font-size: 36px;
   }
-  
+
   .hero-subtitle {
     font-size: 16px;
   }
-  
+
   .hero-tagline {
     font-size: 14px;
   }
-  
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .btn-primary,
   .btn-secondary {
     width: 100%;
     justify-content: center;
   }
-  
+
   .stats-section,
   .skills-section,
   .philosophy-section,
@@ -856,23 +897,23 @@ body {
   .contact-section {
     padding: 60px 24px;
   }
-  
+
   .section-title {
     font-size: 32px;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
