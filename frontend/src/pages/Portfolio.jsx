@@ -228,7 +228,7 @@ const Portfolio = () => {
           <h2 className="section-title">
             <span className="title-prefix">{'>'}</span> FEATURED_PROJECTS
           </h2>
-          <div className="section-subtitle">Production-ready systems and applications</div>
+          <div className="section-subtitle">Engineering problems and their solutions</div>
         </div>
 
         <div className="projects-grid">
