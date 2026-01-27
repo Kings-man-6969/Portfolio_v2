@@ -390,6 +390,11 @@ body {
   padding: 48px;
 }
 
+:root.light .philosophy-content {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--border-medium);
+}
+
 .philosophy-item {
   display: flex;
   gap: 20px;
