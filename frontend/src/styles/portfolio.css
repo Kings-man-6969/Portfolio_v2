@@ -711,6 +711,11 @@ body {
   text-align: center;
 }
 
+:root.light .certifications-placeholder .bg-bg-card {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 2px dashed var(--border-medium);
+}
+
 .certifications-placeholder code {
   color: var(--brand-primary);
   background: var(--brand-hover);
