@@ -63,7 +63,9 @@ const Portfolio = () => {
         <Hero scrollToSection={scrollToSection} />
         <Stats />
         <Philosophy />
+        <Education />
         <Skills />
+        <Certifications />
         <Projects />
         <Contact />
       </main>
