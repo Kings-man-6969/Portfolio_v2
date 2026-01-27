@@ -326,6 +326,14 @@ const Portfolio = () => {
                 <Twitter size={24} />
               </a>
             </div>
+
+            <Button 
+              className="btn-primary btn-resume-download"
+              onClick={handleResumeDownload}
+            >
+              Download Resume
+              <Download size={20} />
+            </Button>
           </div>
 
           <Card className="contact-form-card">
