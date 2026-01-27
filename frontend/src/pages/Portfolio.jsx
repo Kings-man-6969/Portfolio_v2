@@ -148,6 +148,13 @@ const Portfolio = () => {
             </Button>
             <Button 
               className="btn-secondary"
+              onClick={handleResumeDownload}
+            >
+              Download Resume
+              <Download size={20} />
+            </Button>
+            <Button 
+              className="btn-secondary"
               onClick={() => scrollToSection('contact')}
             >
               Get In Touch
