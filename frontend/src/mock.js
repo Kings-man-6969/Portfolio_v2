@@ -91,7 +91,7 @@ export const portfolioData = {
     {
       degree: "Bachelor of Technology in Computer Science and Engineering",
       institution: "Pranveer Singh Institute of Technology, Kanpur",
-      score: "GPA: 7.77",
+      score: "GPA: 8.13",
       year: "2021 - 2025"
     },
     {
