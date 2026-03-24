@@ -39,7 +39,7 @@ export const portfolioData = {
 
     // Resume file (place your resume.pdf in /app/frontend/public/)
     // Update this filename to match your actual resume file
-    resumeFile: "/resume.pdf",
+    resumeFile: "/Prashant_Mishra_Resume.pdf",
     resumeFileName: "Prashant_Mishra_Resume.pdf",
 
     // Social media links (update with your actual profile URLs)
